@@ -43,6 +43,12 @@ input{
   outline: none;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 /* Mobile first style */
 .header,
 .main {
@@ -111,6 +117,7 @@ input{
   background-color: var(--Very-dark-cyan);
 }
 .grid-container input{
+  font-size: 18px;
   text-align: center;
   background-color: var(--Very-light-grayish-cyan);
   border-radius: 5px;
@@ -166,4 +173,18 @@ input{
 .attribution{
   text-align: center;
   font-size: 0.7rem;
+}
+
+/* Desktop */
+@media (min-width: 768px){
+  .tip-calculator{
+    max-width: 750px;
+    flex-direction: row;
+  }
+  .grid-container{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .tip-calculator__output{
+    min-width: 300px;
+  }
 }
