@@ -2,26 +2,168 @@
 
 :root {
   /* Colors */
-
   /* Primary */
   --Strong-cyan: hsl(172, 67%, 45%);
 
   /* Neutral */
-  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Very-dark-cyan: hsl(180, 100%, 15%);
   --Dark-grayish-cyan: hsl(186, 14%, 43%);
   --Grayish-cyan: hsl(184, 14%, 56%);
   --Light-grayish-cyan: hsl(185, 41%, 84%);
-  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 95%);
   --White: hsl(0, 0%, 100%);
 }
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body{
+
+body {
   width: 100vw;
   min-height: 100vh;
   font-family: 'Space Mono', sans-serif;
+  color: var(--Dark-grayish-cyan);
   background-color: var(--Light-grayish-cyan);
+
+  display: flex;
+  flex-direction: column;
+}
+input{
+  width: 100%;
+  text-align: right;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: 'Space Mono', sans-serif;
+
+  color: var(--Very-dark-cyan);
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+/* Mobile first style */
+.header,
+.main {
+  margin: 0 auto;
+}
+
+.nav {
+  width: inherit;
+  display: grid;
+  place-items: center;
+  padding: 40px;
+}
+
+/* Calculator */
+.tip-calculator {
+  width: 100%;
+  max-width: 375px;
+  padding: 30px;
+  background-color: var(--White);
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.tip-calculator__input,
+.tip-calculator__output,
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.container{
+  gap: 5px;
+}
+.input-section-title{
+  font-size: 0.9rem;
+}
+.input-container{
+  padding: 8px 16px;
+  border-radius: 2px;
+  background-color: var(--Very-light-grayish-cyan);
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+/* grid container */
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+
+  margin-top: 10px;
+  border: none;
+}
+.btn{
+  padding: 8px 16px ;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: 'Space Mono', sans-serif;
+  border: none;
+  color: var(--White);
+  background-color: var(--Very-dark-cyan);
+}
+.grid-container input{
+  text-align: center;
+  background-color: var(--Very-light-grayish-cyan);
+  border-radius: 5px;
+}
+.grid-container input::placeholder{
+  color: var(--Grayish-cyan);
+}
+.selected{
+  color: var(--Very-dark-cyan);
+  background-color: var(--Strong-cyan);
+}
+
+/* output section */
+.tip-calculator__output{
+  background-color: var(--Very-dark-cyan);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+}
+.results{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 10px;
+}
+.results__container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.results__container h3{
+  color: var(--White);
+}
+.results__container p{
+  font-size: 0.9rem;
+}
+.results__container output{
+  color: var(--Strong-cyan);
+  font-size: 24px;
+}
+.btn__reset{
+  margin-top: 20px;
+  text-transform: uppercase;
+  color: var(--Very-dark-cyan);
+  background-color: var(--Strong-cyan);
+}
+
+/* Footer */
+.footer{
+  margin-top: auto;
+  padding: 20px;
+}
+.attribution{
+  text-align: center;
+  font-size: 0.7rem;
 }
