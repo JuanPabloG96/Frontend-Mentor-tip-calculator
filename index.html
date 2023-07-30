@@ -35,11 +35,11 @@
         <div class="container">
           <label for="percentage" class="input-section-title">Select Tip %</label>
           <fieldset class="grid-container" id="percentage">
-            <button type="button">5%</button>
-            <button type="button">10%</button>
-            <button type="button">15%</button>
-            <button type="button">25%</button>
-            <button type="button">50%</button>
+            <button class="btn">5%</button>
+            <button class="btn">10%</button>
+            <button class="btn">15%</button>
+            <button class="btn">25%</button>
+            <button class="btn">50%</button>
             <input type="number" name="custom" id="custom" placeholder="Custom">
           </fieldset>
         </div>
@@ -55,32 +55,34 @@
 
       <section class="tip-calculator__output">
         <div class="results">
-          <article class="tip">
+          <article class="results__container">
             <div class="container">
               <h3>Tip Amount</h3>
               <p>/ person</p>
             </div>
-            <output></output>
+            <output class="tip-output">$0.00</output>
           </article>
-          <article class="total">
+          <article class="results__container total">
             <div class="container">
               <h3>Total</h3>
               <p>/ person</p>
             </div>
-            <output></output>
+            <output class="total-output">$0.00</output>
           </article>
         </div>
-        <button class="reset">reset</button>
+        <button class="btn btn__reset">reset</button>
       </section>
     </article>
 
   </main>
+
   <footer class="footer">
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="https://github.com/JuanPabloG96/" target="_blank">JuanPabloG96</a>.
     </div>
   </footer>
+
 </body>
 
 </html>
