@@ -28,7 +28,7 @@
           <label for="bill" class="input-section-title">Bill</label>
           <div class="input-container">
             <img src="images/icon-dollar.svg" alt="dollar icon">
-            <input type="number" name="bill" id="bill">
+            <input type="number" name="bill" id="bill" class="focus-input" onchange="calculateTip()">
           </div>
         </div>
 
@@ -40,15 +40,18 @@
             <button class="btn btn__percent btn-active">15%</button>
             <button class="btn btn__percent">25%</button>
             <button class="btn btn__percent">50%</button>
-            <input type="number" name="custom" id="custom" placeholder="Custom">
+            <input type="number" name="custom" id="custom" placeholder="Custom" onchange="calculateTip()">
           </fieldset>
         </div>
 
         <div class="container">
-          <label for="people" class="input-section-title">Number of People</label>
+          <div class="container__custom">
+            <label for="people" class="input-section-title">Number of People</label>
+            <span class="error-msg" hidden>Can't be zero</span>
+          </div>
           <div class="input-container">
             <img src="images/icon-person.svg" alt="person icon">
-            <input type="number" name="people" id="people">
+            <input type="number" name="people" id="people" class="focus-input" onchange="calculateTip()">
           </div>
         </div>
       </section>
